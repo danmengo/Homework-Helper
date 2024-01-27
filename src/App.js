@@ -5,7 +5,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <a
           href="https://matias.me/nsfw/"
           //href="https://scratch.mit.edu/projects/957087603/"
@@ -25,7 +24,7 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://scratch.mit.edu/projects/957087603/"
           target="_blank"
           rel="noopener noreferrer"
         >
