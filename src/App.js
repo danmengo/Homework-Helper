@@ -6,6 +6,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+
+        <button
+          href="https://scratch.mit.edu/projects/957087603/editor">
+            peepeepoopoo
+        </button>
+
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -15,10 +21,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button>
-            peepeepoopoo
-            href="https://scratch.mit.edu/projects/957087603/editor"
-          </button>
+
           Learn React
         </a>
       </header>
