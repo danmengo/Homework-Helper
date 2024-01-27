@@ -7,29 +7,10 @@ function App() {
       <header className="App-header">
         <a
           href="https://matias.me/nsfw/"
-          //href="https://scratch.mit.edu/projects/957087603/"
           target="_blank">
-
-
-          <button>
-              peepeepoopoo
+          <button theme="pink">
+              button ! press it !
           </button>
-
-
-        </a>
-          
-
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://scratch.mit.edu/projects/957087603/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-
-          Learn React
         </a>
       </header>
     </div>
