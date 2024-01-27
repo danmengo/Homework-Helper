@@ -8,6 +8,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
 
         <button
+          className="App-link"
           href="https://scratch.mit.edu/projects/957087603/editor">
             peepeepoopoo
         </button>
