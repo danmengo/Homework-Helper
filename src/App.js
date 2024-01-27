@@ -1,14 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+
         <a
           href="https://matias.me/nsfw/"
           target="_blank">
-          <button theme="pink">
+          <button>
               button ! press it !
           </button>
         </a>
