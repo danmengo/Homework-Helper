@@ -6,12 +6,19 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <a
+          href="https://matias.me/nsfw/"
+          //href="https://scratch.mit.edu/projects/957087603/"
+          target="_blank">
 
-        <button
-          className="App-link"
-          href="https://scratch.mit.edu/projects/957087603/editor">
-            peepeepoopoo
-        </button>
+
+          <button>
+              peepeepoopoo
+          </button>
+
+
+        </a>
+          
 
         <p>
           Edit <code>src/App.js</code> and save to reload.
