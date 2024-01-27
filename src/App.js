@@ -7,6 +7,9 @@ import Menu from "@material-ui/core/Menu";
 function App() {
 
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -21,11 +24,28 @@ function App() {
                 style={{ position: 'absolute', top: 0, left: 0, margin: 16 }}>
                 &#9776; {/* Menu icon */} Open Menu List
         </Button>
+        <Menu
+            keepMounted
+            anchorEl={anchorEl}
+            onClose={handleClose}
+            open={Boolean(anchorEl)}>
+            <MenuItem onClick={handleClose}>
+                My Account
+            </MenuItem>
+            <MenuItem onClick={handleClose}>
+                Settings
+            </MenuItem>
+            <MenuItem onClick={handleClose}>
+                Profile
+            </MenuItem>
+            <MenuItem onClick={handleClose}>
+                Logout
+            </MenuItem>
+        </Menu>
         <a
           href="https://matias.me/nsfw/"
           target="_blank">
           <button>
-            
             button ! press it !
           </button>
 
