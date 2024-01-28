@@ -9,11 +9,9 @@ def list_numbers(formula) -> list:
             current_num = ""
         elif each.isdigit():
             current_num += each
-
     if current_num:
         numbers.append(current_num)
     return numbers
-
 def list_elements(formula) -> list:
     together_num = list_numbers(formula)
     elements = []
@@ -37,12 +35,10 @@ def list_elements(formula) -> list:
     if current_element:
         elements.append(current_element)
     return elements
-
 def element_counts(formula) -> dict:
     element_list = list_elements(formula)
     counts = []
     counts_dict = {}
-
     for i in range(len(element_list)):
         if element_list[i].isalpha():
             counts.append(element_list[i])
@@ -51,10 +47,8 @@ def element_counts(formula) -> dict:
                     counts.append("1")
             elif i == len(element_list) - 1:
                 counts.append("1")
-
         elif element_list[i].isdigit():
-            counts.append(element_list[i])
-    
+            counts.append(element_list[i])   
     for i in range(len(counts)):
         if counts[i].isalpha():
             if counts[i] in counts_dict:
@@ -63,9 +57,7 @@ def element_counts(formula) -> dict:
                 counts_dict[counts[i]] = int(counts[i + 1])
     
     return counts_dict
-
 user_input = input("Input formula / q to quit: ")
-
 elements = {
         'C': 12.01,
         'H': 1.01,
@@ -79,7 +71,6 @@ elements = {
         'S': 32.07,
         'N': 14.01
         }
-
 while (user_input != 'q'):
     try:
         counts = element_counts(user_input)
@@ -88,13 +79,11 @@ while (user_input != 'q'):
         for key, value in counts.items():
             total += elements[key] * value
             maths.append(f'({elements[key]:.2f}g*{value})')
-
         show_work = "+".join(maths)
         print(f'({user_input})', end=" - ")
         print(show_work, end="")
         print(f' = {total:.2f}g/mol')
         strung = f'({user_input}) " - " {show_work} = {total:.2f}g/mol'
-      
     except:
         print("Invalid formula")
     user_input = input("Input formula / q to quit: ")
