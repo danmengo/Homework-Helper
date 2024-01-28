@@ -14,7 +14,6 @@ def list_numbers(formula) -> list:
         numbers.append(current_num)
     return numbers
 
-
 def list_elements(formula) -> list:
     together_num = list_numbers(formula)
     elements = []
@@ -38,7 +37,6 @@ def list_elements(formula) -> list:
     if current_element:
         elements.append(current_element)
     return elements
-
 
 def element_counts(formula) -> dict:
     element_list = list_elements(formula)
@@ -65,7 +63,6 @@ def element_counts(formula) -> dict:
                 counts_dict[counts[i]] = int(counts[i + 1])
     
     return counts_dict
-
 
 user_input = input("Input formula / q to quit: ")
 
