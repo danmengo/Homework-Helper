@@ -34,6 +34,7 @@ def list_elements(formula) -> list:
                 elements.append(current_element)
             current_element = ""
             elements.append(each)
+        
     if current_element:
         elements.append(current_element)
     return elements
@@ -66,7 +67,7 @@ def element_counts(formula) -> dict:
     return counts_dict
 
 
-user_input = input("Enter a compound: ")
+user_input = input("Input formula / q to quit: ")
 
 elements = {
         'C': 12.01,
@@ -85,20 +86,18 @@ elements = {
 while (user_input != 'q'):
     try:
         counts = element_counts(user_input)
-        
-
         maths = []
         total = 0
         for key, value in counts.items():
             total += elements[key] * value
             maths.append(f'({elements[key]:.2f}g*{value})')
 
-        show_work = " + ".join(maths)
-        print(user_input, end=" - ")
+        show_work = "+".join(maths)
+        print(f'({user_input})', end=" - ")
         print(show_work, end="")
         print(f' = {total:.2f}g/mol')
       
     except:
-        print("Invalid compound")
-    user_input = input("Enter a compound or q to quit: ")
+        print("Invalid formula")
+    user_input = input("Input formula / q to quit: ")
 
