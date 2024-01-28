@@ -93,6 +93,7 @@ while (user_input != 'q'):
         print(f'({user_input})', end=" - ")
         print(show_work, end="")
         print(f' = {total:.2f}g/mol')
+        strung = f'({user_input}) " - " {show_work} = {total:.2f}g/mol'
       
     except:
         print("Invalid formula")
