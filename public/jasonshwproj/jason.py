@@ -91,16 +91,13 @@ while (user_input != 'q'):
         total = 0
         for key, value in counts.items():
             total += elements[key] * value
-            maths.append(f'({elements[key]}g*{value})')
+            maths.append(f'({elements[key]:.2f}g*{value})')
 
         show_work = " + ".join(maths)
         print(user_input, end=" - ")
         print(show_work, end="")
         print(f' = {total:.2f}g/mol')
-
-     # {compound} - ({molarmass}g*{count}) + ({molarmass}g*{count}) = {total}g/mol
-
-        
+      
     except:
         print("Invalid compound")
     user_input = input("Enter a compound or q to quit: ")
