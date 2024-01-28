@@ -11,10 +11,6 @@ with open(str({filename})) as f:
         for each in equip:
             if each in processed:
                 inventory.append(each)
-        print(processed)
-
-print()
-print()
 
 no_dupes = set(inventory)
 for i in no_dupes:
