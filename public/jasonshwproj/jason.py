@@ -66,32 +66,42 @@ def element_counts(formula) -> dict:
     return counts_dict
 
 
-def calculate_total(formula):
-    counts = element_counts(formula)
-    elements = {'C': 12.01,
-           'H': 1.01,
-           'O': 16.00,
-           'Cl': 35.45,
-           'Vr': 79.90,
-           'Na': 22.99,
-           'I': 19.00,
-           'S': 129.90,
-           'K':39.10,
-           'S': 32.07,
-           'N': 14.01
-            }
-    
-    
-
-
-
-
-
 user_input = input("Enter a compound: ")
+
+elements = {
+        'C': 12.01,
+        'H': 1.01,
+        'O': 16.00,
+        'Cl': 35.45,
+        'Br': 79.90,
+        'Na': 22.99,
+        'F': 19.00,
+        'I': 129.90,
+        'K':39.10,
+        'S': 32.07,
+        'N': 14.01
+        }
 
 while (user_input != 'q'):
     try:
-        print(element_counts(user_input))
+        counts = element_counts(user_input)
+        
+
+        maths = []
+        total = 0
+        for key, value in counts.items():
+            total += elements[key] * value
+            maths.append(f'({elements[key]}g*{value})')
+
+        show_work = " + ".join(maths)
+        print(user_input, end=" - ")
+        print(show_work, end="")
+        print(f' = {total:.2f}g/mol')
+
+     # {compound} - ({molarmass}g*{count}) + ({molarmass}g*{count}) = {total}g/mol
+
+        
     except:
         print("Invalid compound")
     user_input = input("Enter a compound or q to quit: ")
+
